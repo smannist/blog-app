@@ -27,7 +27,7 @@ const CommentBox = ({ blog }) => {
     return (
       <div className="max-w-md mx-auto mt-5 bg-yellow-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <h4 className="text-lg font-bold mb-2">Comments</h4>
-        <p>This blog doesn't have any comments yet.</p>
+        <p>This blog doesn&rsquo;t have any comments yet.</p>
         <form onSubmit={addComment} className="mt-4">
           <input
             type="text"

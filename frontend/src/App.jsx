@@ -24,7 +24,7 @@ const App = () => {
       userDispatch({ type: "LOGIN", payload: user });
       blogService.setToken(user.token);
     }
-  }, []);
+  }, [userDispatch]);
 
   const blogs = useQuery({
     queryKey: ["blogs"],
