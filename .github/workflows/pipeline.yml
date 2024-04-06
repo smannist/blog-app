@@ -41,5 +41,6 @@ jobs:
       - name: Run backend unit tests
         env:
           TEST_MONGO_DB_URI: ${{ secrets.TEST_MONGO_DB_URI }}
+          SECRET: ${{ secrets.SECRET }}
         run: npm run test
         working-directory: backend
