@@ -31,6 +31,17 @@ describe("Users API GET", () => {
 });
 
 describe("Users API POST", () => {
+  test("user receives token after successful login", async () => {
+    const credentials = {
+      username: "solarcityfan2024",
+      password: "yetanothersecretpassword",
+    };
+
+    token = await helper.loginAndGetToken(api, credentials);
+
+    expect(token).toBeDefined();
+  });
+
   test("posting fails with duplicate username", async () => {
     const response = await helper.addUser(api, mockData.duplicateUsername);
     expect(response.status).toBe(400);
@@ -53,6 +64,8 @@ describe("Users API POST", () => {
     );
   });
 });
+
+
 
 afterAll(async () => {
   await mongoose.connection.close();
