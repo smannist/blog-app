@@ -9,15 +9,18 @@ jobs:
   build_and_check_frontend:
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
+          
       - name: Install frontend dependencies
         run: npm install
         working-directory: frontend
-
+      
       - name: Run frontend unit tests
         run: npm run test
         working-directory: frontend
@@ -29,7 +32,10 @@ jobs:
   build_and_check_backend:
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
