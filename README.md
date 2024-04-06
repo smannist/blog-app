@@ -4,6 +4,8 @@
 
 Developed as part of the Helsinki University Full-stack Open course. Currently there is no feature for creating an account via the frontend, you will have to manually do this via backend posting or i.e MongoDB Atlas. Frontend is pretty rough and was not really the main focus, but hey, I got to learn Tailwind a little bit. :D
 
+The app is currently deployed live at [Render](https://blog-app-ouxe.onrender.com/).
+
 ## Running the app locally
 
 1. **Clone the repository**
