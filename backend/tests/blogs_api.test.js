@@ -26,8 +26,6 @@ beforeEach(async () => {
 
   await User.insertMany(mockUserData.mockUsers);
 
-  // Searching for user_id in database and adding the value to mock_data is probably not the best way
-  // But it was the first that came to my mind
   const user = await User.findOne({ username: "solarcityfan2024" });
 
   await Promise.all(
