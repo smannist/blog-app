@@ -44,3 +44,13 @@ jobs:
           SECRET: ${{ secrets.SECRET }}
         run: npm run test
         working-directory: backend
+
+    deployment:
+      needs: [build_and_check_frontend, build_and_check_backend]
+      runs-on: ubuntu-20.04
+      if: github.event_name == 'push'
+      steps:
+        - uses: actions/checkout@v4
+
+        - name: Deploy to Render
+        run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
