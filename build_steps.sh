@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ../backend
+cd backend
 npm install
 cd ../frontend
 npm run build
