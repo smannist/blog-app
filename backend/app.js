@@ -26,6 +26,7 @@ mongoose.connect(config.MONGO_DB_URI).then(() => {
 
 const app = express();
 
+app.use(express.static("dist"));
 app.use(cors());
 app.use(express.json());
 app.use(logger.createMorganMiddleware());
