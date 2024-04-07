@@ -27,3 +27,19 @@ Demo of the app is currently deployed live at [Render](https://blog-app-ouxe.onr
     - `your_main_database_url`: URL for your main MongoDB database.
 4. **Run npm install, this will install all required dependencies**
 5. **You can run the backend and frontend seperately by using npm run dev command, alternatively, there is a script for running both simultaneously (start.sh)**
+
+## Running tests locally
+
+There are ready made scripts for running the tests locally. The command is the same for both front- and backend.
+
+```
+npm run test
+```
+
+## Running style checks locally
+
+There are ready made scripts for running the style checks locally. The command is the same for both front- and backend.
+
+```
+npm run lint
+```
