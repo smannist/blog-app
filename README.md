@@ -10,7 +10,9 @@ Demo of the app is currently deployed live at [Render](https://blog-app-ouxe.onr
 
 1. **Clone the repository**
 2. **Create an .env file in the backend folder**
-2. **Set up the following values in your .env file**:
+> [!WARNING]
+> Never push the .env file to your GitHub repository
+3. **Set up the following values in your .env file**:
     ```
     SECRET=your_secret_string
     PORT=your_chosen_port
@@ -23,8 +25,5 @@ Demo of the app is currently deployed live at [Render](https://blog-app-ouxe.onr
     - `your_chosen_port`: The port number you want your backend to run on.
     - `your_test_database_url`: URL for your test MongoDB database.
     - `your_main_database_url`: URL for your main MongoDB database.
-3. **Run npm install, this will install all required dependencies**
-4. **You can run the backend and frontend seperately by using npm run dev command, alternatively, there is a script for running both simultaneously (start.sh)**
-
-> [!WARNING]
-> Never push the .env file to your GitHub repository
+4. **Run npm install, this will install all required dependencies**
+5. **You can run the backend and frontend seperately by using npm run dev command, alternatively, there is a script for running both simultaneously (start.sh)**
