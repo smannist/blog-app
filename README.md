@@ -27,8 +27,9 @@ Demo of the app is currently deployed live at [Render](https://blog-app-ouxe.onr
     - `your_chosen_port`: The port number you want your backend to run on.
     - `your_test_database_url`: URL for your test MongoDB database.
     - `your_main_database_url`: URL for your main MongoDB database.
-4. **Run npm install, this will install all required dependencies**
-5. **You can run the backend and frontend seperately by using npm run dev command, alternatively, there is a script for running both simultaneously (start.sh)**
+4. **Build dev environment with docker: docker compose -f docker-compose.dev.yml build**
+5. **Start dev environment with docker: docker compose -f docker-compose.dev.yml up**
+6. **docker-compose.yml runs the production app, but it is not ready for deployment yet. If you want to deploy with docker you will have to figure out how to setup the environmental variables.**
 
 ## Running tests locally
 
