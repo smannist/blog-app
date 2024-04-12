@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  blog-app-frontend-dev:
+    image: blog-app-frontend-prod
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: blog-app-frontend-prod
+
+  blog-app-backend-dev:
+    image: blog-app-backend-prod
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/.env
+    ports:
+      - 3003:3003
+    container_name: blog-app-backend-prod
